@@ -8,83 +8,79 @@
   <link rel="icon" href="assets/images/favicon.ico" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Перейти до основного контенту</a>
-
   <header class="site-header">
-    <h1 class="site-title">Лабораторна робота 2 — Навчальний лендінг</h1>
+    <h1 id="site-title">Мій перший лендінг</h1>
     <nav class="site-nav" aria-label="Головна навігація">
       <ul>
         <li><a href="index.html" aria-current="page">Головна</a></li>
-        <li><a href="news.html">Новини</a></li>
-        <li><a href="services.html">Послуги</a></li>
+        <li><a href="about.html">Про нас</a></li>
         <li><a href="contacts.html">Контакти</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <article class="news">
-      <header class="news__header">
-        <h2>Новина про студента</h2>
+    <article class="hero-article">
+      <header>
+        <h2>Новини</h2>
       </header>
-
-      <p>
-        Студент: Бєлоусова Валерія Вячеславівна. Група: 6.1213-пі2.
-        Коротка інформація про навчальні досягнення та активності.
-      </p>
-
-      <figure class="news__figure">
-        <img src="assets/images/user.jpg" alt="Фото студентки Бєлоусової Валерії" width="600" />
-        <figcaption>Невеликий підпис до зображення (опис фото).</figcaption>
+      <p>Студент: Бєлоусова Валерія Вячеславівна. Група: 6.1213-пі2.</p>
+      <figure>
+        <img src="assets/images/favicon.ico" alt="Фото студента" width="200" />
+        <figcaption>Це зображення для новини</figcaption>
       </figure>
     </article>
 
-    <section class="advantages" aria-labelledby="advantages-title">
-      <h3 id="advantages-title">Наші переваги</h3>
-      <ul>
-        <li>Актуальні навчальні матеріали</li>
-        <li>Зручна навігація сайту</li>
-        <li>Адаптивний дизайн для мобільних</li>
+    <section aria-labelledby="benefits-title" class="benefits">
+      <h3 id="benefits-title">Наші переваги</h3>
+      <ul class="advantages">
+        <li>Сучасні технології фронтенду</li>
+        <li>Командна робота та менторинг</li>
+        <li>Практика на реальних кейсах</li>
       </ul>
     </section>
 
-    <section class="pricing" aria-labelledby="pricing-title">
-      <h3 id="pricing-title">Приклад таблиці послуг</h3>
+    <section aria-labelledby="services-title" class="services">
+      <h3 id="services-title">Наші послуги</h3>
       <table>
         <thead>
           <tr>
             <th scope="col">Послуга</th>
             <th scope="col">Опис</th>
-            <th scope="col">Вартість</th>
+            <th scope="col">Ціна</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Консультація</td>
-            <td>Пояснення завдань та перевірка роботи</td>
-            <td>Безкоштовно</td>
+            <td>Розробка сайту</td>
+            <td>Лендінг або невеликий корпоративний сайт</td>
+            <td>500 $</td>
           </tr>
           <tr>
-            <td>Практичне заняття</td>
-            <td>Розбір прикладів і вправ</td>
-            <td>Умовно</td>
+            <td>SEO-оптимізація</td>
+            <td>Базовий аудит та покращення видимості</td>
+            <td>300 $</td>
+          </tr>
+          <tr>
+            <td>Підтримка</td>
+            <td>Оновлення та технічна допомога</td>
+            <td>100 $ / місяць</td>
           </tr>
         </tbody>
       </table>
     </section>
   </main>
 
-  <aside class="useful">
+  <aside class="sidebar" aria-label="Додаткова інформація">
     <h3>Корисні посилання</h3>
     <ul>
-      <li><a href="https://developer.mozilla.org/uk/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+      <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
       <li><a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">W3C Validator</a></li>
     </ul>
   </aside>
 
   <footer class="site-footer">
-    <p>Група: 6.1213-пі2 • Навчальний лендінг (ЛР2)</p>
-    <p>&copy; 2025</p>
+    <p>© 2025 Група 6.1213-пі2</p>
   </footer>
 </body>
 </html>
