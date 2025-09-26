@@ -258,3 +258,153 @@ a:hover, a:focus-visible { text-decoration: underline; outline: none; }
   font-size: 0.875rem;
   padding: var(--space-6) var(--space-4);
 }
+
+/* 4) СЕРВІСИ / ТАБЛИЦЯ (BEM: .services) */
+.services__title {
+  margin: 0 0 var(--space-3);
+  font-size: 1.25rem;
+}
+
+.services__table {
+  width: 100%;
+  border-collapse: collapse;              /* лінії зливаються */
+  border: 1px solid var(--c-border);      /* рамка по периметру */
+  border-radius: var(--radius-1);         /* округлення для сучасного вигляду */
+  overflow: hidden;                        /* щоб округлення працювало */
+}
+
+.services__header,
+.services__cell {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--c-border);
+  text-align: left;
+}
+
+.services__header {
+  background: #f7f7f9;                    /* світлий фон шапки */
+  font-weight: 600;
+}
+
+/* Зебра */
+.services__row:nth-child(even) .services__cell {
+  background: #fcfcfd;
+}
+
+/* 5) SIDEBAR */
+.sidebar {
+  background: #f9f9f9;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-2);
+  padding: var(--space-6) var(--space-4);
+  margin: var(--space-6) auto;
+  max-width: var(--container-max);
+  box-shadow: var(--shadow-1);
+}
+
+.sidebar__title { margin: 0 0 var(--space-3); font-size: 1.25rem; }
+.sidebar__list { display: grid; gap: var(--space-2); }
+.sidebar__item { color: var(--c-text); }
+.sidebar__link { color: var(--c-primary); }
+.sidebar__link:hover, .sidebar__link:focus-visible { text-decoration: underline; }
+
+/* Модифікатори (просто різний фон) */
+.sidebar--links  { background: #c3e9a9; }
+.sidebar--values { background: #93dbca; }
+.sidebar--social { background: #80b180; }
+
+/* 6) FOOTER */
+.footer {
+  background: #2f3538;
+  color: #fff;
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.footer__copy { margin: 0; font-size: 0.95rem; }
+
+/* 7) CONTACT FORM */
+.contact-form {
+  width: 100%;
+  max-width: 640px;            /* комфортна ширина */
+  margin: 0 auto var(--space-6);
+  padding: var(--space-6);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-1);
+}
+
+.contact-form__item {
+  display: grid;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.contact-form__label {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--c-text);
+  background: #fff;
+  border: 1px solid #dce3e1;
+  border-radius: var(--radius-2);
+  outline: none;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+/* placeholder */
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+  color: #9aa3ab;
+}
+
+/* hover */
+.contact-form__input:hover,
+.contact-form__textarea:hover {
+  border-color: #9aa3ab;
+}
+
+/* focus */
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px rgba(13,110,253,.15);
+}
+
+/* висота textarea */
+.contact-form__textarea { min-height: 8rem; resize: vertical; }
+
+/* HTML5-валідація */
+.contact-form__input:required:user-invalid,
+.contact-form__textarea:required:user-invalid { border-color: #dc3545; }  /* червона рамка */
+.contact-form__input:required:valid,
+.contact-form__textarea:required:valid     { border-color: #198754; }     /* зелена рамка */
+
+/* кнопка */
+.contact-form__button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border: none;
+  border-radius: var(--radius-2);
+  background: var(--c-primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-1);
+  transition: background .25s ease, transform .05s ease;
+}
+.contact-form__button:hover,
+.contact-form__button:focus-visible { background: var(--c-primary-600); }
+.contact-form__button:active { transform: translateY(1px); }
+.contact-form__button:disabled { opacity:.6; cursor:not-allowed; }
+
