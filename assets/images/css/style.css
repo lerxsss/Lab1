@@ -1,0 +1,260 @@
+/* -----------------------------------------------------------
+   0) Налаштування box-sizing для всієї сторінки
+----------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box; /* ширина/висота включає padding+border */
+}
+
+/* -----------------------------------------------------------
+   1) CSS-змінні (токени дизайну): відступи, радіуси, кольори
+----------------------------------------------------------- */
+:root {
+  /* Ширина контейнера */
+  --container-max: 1200px;
+
+  /* Відступи (scale) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+
+  /* Радіуси */
+  --radius-1: 4px;
+  --radius-2: 8px;
+
+  /* Кольори */
+  --c-bg: #f4f6f8;         /* фон сторінки */
+  --c-surface: #ffffff;    /* фон “карток”/секцій */
+  --c-text: #333333;       /* основний текст */
+  --c-muted: #666a6e;      /* приглушений текст */
+  --c-border: #e5e7eb;     /* світла межа */
+  --c-primary: #0d6efd;    /* базовий синій */
+  --c-primary-600: #0b5ed7;/* темніший для :hover */
+  --c-accent: #ffc800;     /* акцент для дрібних підсвіток */
+
+  /* Тінь */
+  --shadow-1: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+/* -----------------------------------------------------------
+   2) Reset/база
+----------------------------------------------------------- */
+html { font-size: 16px; }
+body {
+  margin: 0;
+  color: var(--c-text);
+  background: var(--c-bg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Скидаємо маркери лише там, де керуємо ними через class */
+ul[class], ol[class] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Посилання за замовчуванням */
+a { color: var(--c-primary); text-decoration: none; }
+a:hover, a:focus-visible { text-decoration: underline; outline: none; }
+
+/* Допоміжний контейнер (за потреби) */
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+/* -----------------------------------------------------------
+   3) HEADER + NAVIGATION (BEM: .header, .navigation)
+----------------------------------------------------------- */
+.header {
+  background: var(--c-primary);
+  color: #fff;
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.navigation__list {
+  display: inline-flex;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.navigation__link {
+  color: #fff;
+  font-weight: 600;
+  padding: var(--space-2) var(--space-3); /* клікобезпечна зона */
+  border-radius: var(--radius-1);
+}
+
+.navigation__link:hover,
+.navigation__link:focus-visible {
+  background: rgba(255,255,255,0.15);
+}
+
+/* -----------------------------------------------------------
+   4) MAIN + ARTICLE (BEM: .main, .article)
+----------------------------------------------------------- */
+.main {
+  max-width: var(--container-max);
+  margin: var(--space-8) auto;
+  padding: var(--space-6) var(--space-4);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-1);
+}
+
+.main__title {
+  margin: 0 0 var(--space-6);
+  font-size: 1.75rem;
+  line-height: 1.3;
+}
+
+/* якщо кілька статей підряд — робимо відступ між ними */
+.article + .article { margin-top: var(--space-8); }
+
+.article__title {
+  margin: 0 0 var(--space-3);
+  font-size: 1.5rem;
+}
+
+.article__text { margin: 0 0 var(--space-6); }
+
+/* -----------------------------------------------------------
+   5) MEDIA (окремий блок + модифікатор, як у mix-класах)
+----------------------------------------------------------- */
+.media { margin: var(--space-6) 0; }
+
+.media--framed {
+  background: #fafafa;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-2);
+  padding: var(--space-3);
+}
+
+.media__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-1);
+}
+
+.media__caption {
+  margin-top: var(--space-2);
+  color: var(--c-muted);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* -----------------------------------------------------------
+   6) BENEFITS (простий список)
+----------------------------------------------------------- */
+.benefits__title { margin-top: 0; }
+.benefits__list { margin: var(--space-3) 0 var(--space-6); padding-left: 1.2rem; }
+.benefits__item { margin-bottom: var(--space-2); }
+
+/* -----------------------------------------------------------
+   7) SERVICES (таблиця)
+----------------------------------------------------------- */
+.services__title { margin-top: 0; }
+
+.services__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-3);
+}
+
+.services__header,
+.services__cell {
+  border: 1px solid var(--c-border);
+  padding: var(--space-3);
+  text-align: left;
+}
+
+.services__header {
+  background: #f7f9fc;
+  font-weight: 700;
+}
+
+/* -----------------------------------------------------------
+   8) SIDEBAR (модифікатори: --links, --values, --social)
+----------------------------------------------------------- */
+.sidebar {
+  max-width: var(--container-max);
+  margin: var(--space-8) auto;
+  padding: var(--space-6) var(--space-4);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-1);
+}
+
+.sidebar__title { margin-top: 0; }
+.sidebar__list { margin: var(--space-3) 0 0; }
+.sidebar__item + .sidebar__item { margin-top: var(--space-2); }
+.sidebar__link { color: var(--c-primary-600); }
+
+/* -----------------------------------------------------------
+   9) CONTACT FORM (BEM: .contact-form)
+----------------------------------------------------------- */
+.contact-form {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.contact-form__label {
+  display: inline-block;
+  margin-bottom: var(--space-1);
+  font-weight: 600;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-1);
+  font: inherit;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  outline: 2px solid var(--c-primary);
+  outline-offset: 2px;
+}
+
+.contact-form__button {
+  align-self: start;
+  padding: var(--space-3) var(--space-4);
+  background: var(--c-primary);
+  color: #fff;
+  border: 0;
+  border-radius: var(--radius-1);
+  cursor: pointer;
+}
+
+.contact-form__button:hover,
+.contact-form__button:focus-visible {
+  background: var(--c-primary-600);
+}
+
+/* -----------------------------------------------------------
+   10) FOOTER
+----------------------------------------------------------- */
+.footer {
+  text-align: center;
+  color: var(--c-muted);
+  font-size: 0.875rem;
+  padding: var(--space-6) var(--space-4);
+}
