@@ -6,41 +6,53 @@
   <meta name="description" content="Головна сторінка навчального лендінгу: новини, послуги, переваги." />
   <title>Лабораторна 2 - Головна</title>
   <link rel="icon" href="assets/images/favicon.ico" />
+  <!-- (опційно) підключення стилів: <link rel="stylesheet" href="assets/css/style.css" /> -->
 </head>
 <body>
-  <!-- HEADER (блок) -->
+
+  <!-- HEADER -->
   <header class="header">
     <h1 class="header__title">Мій перший лендінг</h1>
 
-    <!-- navigation — окремий блок -->
+    <!-- Навігація як окремий блок -->
     <nav class="navigation" aria-label="Головна навігація">
       <ul class="navigation__list">
         <li class="navigation__item">
-          <a href="index.html" class="navigation__link" aria-current="page">Головна</a>
+          <a class="navigation__link" href="index.html" aria-current="page">Головна</a>
         </li>
         <li class="navigation__item">
-          <a href="about.html" class="navigation__link">Про нас</a>
+          <a class="navigation__link" href="about.html">Про нас</a>
         </li>
         <li class="navigation__item">
-          <a href="contacts.html" class="navigation__link">Контакти</a>
+          <a class="navigation__link" href="contacts.html">Контакти</a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <!-- MAIN (блок) -->
+  <!-- MAIN -->
   <main class="main" id="main">
-    <!-- Стаття/новина -->
+
+    <!-- Стаття / новина -->
     <article class="article">
       <header>
-        <h2 class="article__title">Новини</h2>
+        <h2 class="article__title">Новина дня</h2>
       </header>
-      <p class="article__text">Студент: Бєлоусова Валерія Вячеславівна. Група: 6.1213-пі2.</p>
 
-      <!-- mix: media (блок) + article__media (елемент батьківського) -->
+      <p class="article__text">
+        Студент: Бєлоусова Валерія Вячеславівна. Група: 6.1213-пі2. Коротка інформація про навчальні досягнення та активності.
+      </p>
+
+      <!-- mix: media (блок) + article__media (елемент батьківського) + модифікатор media--framed -->
       <figure class="media article__media media--framed">
-        <!-- використано favicon як зображення -->
-        <img src="assets/images/favicon.ico" alt="Фото студента" class="media__img" width="200" loading="lazy" decoding="async" />
+        <img
+          class="media__img"
+          src="assets/images/favicon.ico"
+          alt="Фото студента"
+          width="200"
+          loading="lazy"
+          decoding="async"
+        />
         <figcaption class="media__caption">Це зображення для новини</figcaption>
       </figure>
     </article>
@@ -58,6 +70,7 @@
     <!-- Послуги -->
     <section class="services" aria-labelledby="services-title">
       <h3 id="services-title" class="services__title">Наші послуги</h3>
+
       <table class="services__table">
         <thead>
           <tr class="services__row">
@@ -87,18 +100,12 @@
     </section>
   </main>
 
-  <!-- ASIDE -->
-  <aside class="sidebar" aria-label="Додаткова інформація">
+  <!-- ASIDE: модифікатор для варіації зі списком посилань -->
+  <aside class="sidebar sidebar--links" aria-label="Корисні посилання">
     <h3 class="sidebar__title">Корисні посилання</h3>
     <ul class="sidebar__list">
-      <li class="sidebar__item"><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
-      <li class="sidebar__item"><a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">W3C Validator</a></li>
-    </ul>
-  </aside>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer__copy">© 2025 Група 6.1213-пі2</p>
-  </footer>
-</body>
-</html>
+      <li class="sidebar__item">
+        <a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
+      </li>
+      <li class="sidebar__item">
+        <a class=
