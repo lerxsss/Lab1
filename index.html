@@ -2,122 +2,123 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Головна сторінка навчального лендінгу: новини, послуги, переваги." />
-  <title>Лабораторна 2 - Головна</title>
+  <title>Лабораторна 4 — Головна</title>
   <link rel="icon" href="assets/images/favicon.ico" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <div class="layout">
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="header__title">Лабораторна №4</h1>
+      <nav class="nav" aria-label="Головна навігація">
+        <a class="nav__link" href="index.html" aria-current="page">Головна</a>
+        <a class="nav__link" href="about.html">Про нас</a>
+        <a class="nav__link nav__link--cta" href="contacts.html">Контакти</a>
+      </nav>
+    </header>
 
-  <!-- HEADER -->
-  <header class="header">
-    <h1 class="header__title">Мій перший лендінг</h1>
+    <!-- SIDENAV (уніфікований) -->
+    <aside class="sidenav">
+      <section class="sidebar sidebar--links" aria-label="Корисні посилання">
+        <h3 class="sidebar__title">Корисні посилання</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS-Tricks</a></li>
+        </ul>
+      </section>
 
-    <!-- Навігація -->
-    <nav class="navigation" aria-label="Головна навігація">
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link" href="index.html" aria-current="page">Головна</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="about.html">Про нас</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="contacts.html">Контакти</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+      <section class="sidebar sidebar--values" aria-label="Цінності">
+        <h3 class="sidebar__title">Цінності</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Якість коду та прозорість</li>
+          <li class="sidebar__item">Навчання через практику</li>
+          <li class="sidebar__item">Комунікація та підтримка</li>
+        </ul>
+      </section>
 
-  <!-- MAIN -->
-  <main class="main" id="main">
+      <section class="sidebar sidebar--social" aria-label="Соціальні мережі">
+        <h3 class="sidebar__title">Соціальні мережі</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><a class="sidebar__link" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </section>
+    </aside>
 
-    <!-- Стаття -->
-    <article class="article">
-      <header>
-        <h2 class="article__title">Новина дня</h2>
-      </header>
+    <!-- MAIN -->
+    <main class="main" id="main">
+      <h2 class="main__title">Останні новини</h2>
 
-      <p class="article__text">
-        Студент: Бєлоусова Валерія Вячеславівна. Група: 6.1213-пі2. Коротка інформація про навчальні досягнення та активності.
-      </p>
+      <!-- Стрічка новин -->
+      <section class="news" aria-labelledby="news-title">
+        <h3 id="news-title" class="news__title" hidden>Стрічка новин</h3>
 
-      <!-- Зображення -->
-      <figure class="media article__media media--framed">
-        <img
-          class="media__img"
-          src="assets/images/favicon.ico"
-          alt="Фото студента"
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption class="media__caption">Це зображення для новини</figcaption>
-      </figure>
-    </article>
+        <div class="news__list">
+          <!-- Картка новини 1 -->
+          <article class="news-card">
+            <figure class="media">
+              <img class="media__img" src="assets/images/favicon.ico" alt="Зображення новини 1" />
+            </figure>
+            <h4 class="news-card__title">Студентка Бєлоусова Валерія (6.1213-пі2)</h4>
+            <p class="news-card__excerpt">Розпочала роботу над лабораторною №4: реорганізовано структуру та стилі за BEM.</p>
+            <p class="news-card__meta">19.09.2025</p>
+            <button class="news-card__btn" type="button">Читати далі</button>
+          </article>
 
-    <!-- Переваги -->
-    <section class="benefits" aria-labelledby="benefits-title">
-      <h3 id="benefits-title" class="benefits__title">Наші переваги</h3>
-      <ul class="benefits__list">
-        <li class="benefits__item">Сучасні технології фронтенду</li>
-        <li class="benefits__item">Командна робота та менторинг</li>
-        <li class="benefits__item">Практика на реальних кейсах</li>
-      </ul>
-    </section>
+          <!-- Картка новини 2 -->
+          <article class="news-card">
+            <figure class="media">
+              <img class="media__img" src="assets/images/favicon.ico" alt="Зображення новини 2" />
+            </figure>
+            <h4 class="news-card__title">Шаблон сайту уніфіковано</h4>
+            <p class="news-card__excerpt">Додано спільний grid-layout, оновлено навігацію та sidebar-панелі.</p>
+            <p class="news-card__meta">20.09.2025</p>
+            <button class="news-card__btn" type="button">Читати далі</button>
+          </article>
 
-    <!-- Послуги -->
-    <section class="services" aria-labelledby="services-title">
-      <h3 id="services-title" class="services__title">Наші послуги</h3>
-      <table class="services__table">
-        <thead>
-          <tr class="services__row">
-            <th scope="col" class="services__header">Послуга</th>
-            <th scope="col" class="services__header">Опис</th>
-            <th scope="col" class="services__header">Ціна</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="services__row">
-            <td class="services__cell">Розробка сайту</td>
-            <td class="services__cell">Лендінг або невеликий корпоративний сайт</td>
-            <td class="services__cell">500 $</td>
-          </tr>
-          <tr class="services__row">
-            <td class="services__cell">SEO-оптимізація</td>
-            <td class="services__cell">Базовий аудит та покращення видимості</td>
-            <td class="services__cell">300 $</td>
-          </tr>
-          <tr class="services__row">
-            <td class="services__cell">Підтримка</td>
-            <td class="services__cell">Оновлення та технічна допомога</td>
-            <td class="services__cell">100 $ / місяць</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
+          <!-- Картка новини 3 -->
+          <article class="news-card">
+            <figure class="media">
+              <img class="media__img" src="assets/images/favicon.ico" alt="Зображення новини 3" />
+            </figure>
+            <h4 class="news-card__title">Покращено UX форми</h4>
+            <p class="news-card__excerpt">Додано підсвітку станів полів, валідацію та чіткі підказки користувачу.</p>
+            <p class="news-card__meta">21.09.2025</p>
+            <button class="news-card__btn" type="button">Читати далі</button>
+          </article>
+        </div>
+      </section>
+    </main>
 
-  <!-- ASIDE -->
-  <aside class="sidebar sidebar--links" aria-label="Корисні посилання">
-    <h3 class="sidebar__title">Корисні посилання</h3>
-    <ul class="sidebar__list">
-      <li class="sidebar__item">
-        <a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
-      </li>
-      <li class="sidebar__item">
-        <a class="sidebar__link" href="https://w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a>
-      </li>
-      <li class="sidebar__item">
-        <a class="sidebar__link" href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS-Tricks</a>
-      </li>
-    </ul>
-  </aside>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__text">© 2025 Група <span class="footer__group-name">6.1213-пі2</span></p>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer__text">© 2025 Група 6.1213-2</p>
-  </footer>
-
+        <address class="footer__contacts" aria-label="Наші контакти">
+          <h3 class="footer__contacts-title">Наші контакти</h3>
+          <ul class="footer__contacts-list">
+            <li class="footer__contacts-item">
+              <span class="footer__label">Email:</span>
+              <a class="footer__link" href="mailto:example@mail.com">example@mail.com</a>
+            </li>
+            <li class="footer__contacts-item">
+              <span class="footer__label">Телефон:</span>
+              <a class="footer__link" href="tel:+380501112233">+38 (050) 111-22-33</a>
+            </li>
+            <li class="footer__contacts-item">
+              <span class="footer__label">Адреса:</span>
+              Запоріжжя, вул. Університетська, 66б
+            </li>
+          </ul>
+        </address>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

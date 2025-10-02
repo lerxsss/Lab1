@@ -2,118 +2,148 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Сторінка Контакти — форма зворотного зв'язку та контактні дані." />
-  <title>Лабораторна 2 - Контакти</title>
+  <title>Лабораторна 4 — Контакти</title>
   <link rel="icon" href="assets/images/favicon.ico" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <div class="layout">
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="header__title">Лабораторна №4</h1>
+      <nav class="nav" aria-label="Головна навігація">
+        <a class="nav__link" href="index.html">Головна</a>
+        <a class="nav__link" href="about.html">Про нас</a>
+        <a class="nav__link nav__link--cta" href="contacts.html" aria-current="page">Контакти</a>
+      </nav>
+    </header>
 
-  <!-- HEADER (спільний для всіх сторінок) -->
-  <header class="header">
-    <h1 class="header__title">Мій перший лендінг</h1>
-    <nav class="navigation" aria-label="Головна навігація">
-      <ul class="navigation__list">
-        <li class="navigation__item"><a class="navigation__link" href="index.html">Головна</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="about.html">Про нас</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="contacts.html" aria-current="page">Контакти</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- SIDENAV (уніфікований) -->
+    <aside class="sidenav">
+      <section class="sidebar sidebar--links" aria-label="Корисні посилання">
+        <h3 class="sidebar__title">Корисні посилання</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS-Tricks</a></li>
+        </ul>
+      </section>
 
-  <!-- MAIN -->
-  <main class="main" id="main">
-    <h2 class="main__title">Зв’яжіться з нами</h2>
+      <section class="sidebar sidebar--values" aria-label="Цінності">
+        <h3 class="sidebar__title">Цінності</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Якість коду та прозорість</li>
+          <li class="sidebar__item">Навчання через практику</li>
+          <li class="sidebar__item">Комунікація та підтримка</li>
+        </ul>
+      </section>
 
-    <!-- contact-form — єдиний блок форми в main -->
-    <form class="contact-form" action="#" method="post" novalidate>
-      <!-- Ім’я -->
-      <div class="contact-form__item">
-        <label for="name" class="contact-form__label">Ім’я</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          class="contact-form__input"
-          placeholder="Ваше ім’я"
-          required
-          minlength="2"
-          maxlength="50"
-          pattern="^[A-Za-zА-Яа-яІіЇїЄєҐґ'’\- ]{2,50}$"
-          title="Використовуйте українські або латинські літери, пробіли, апостроф чи тире (2–50 символів)."
-        />
+      <section class="sidebar sidebar--social" aria-label="Соціальні мережі">
+        <h3 class="sidebar__title">Соціальні мережі</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><a class="sidebar__link" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main" id="main">
+      <h2 class="main__title">Зв’яжіться з нами</h2>
+
+      <!-- Єдина форма в main -->
+      <form class="contact-form" action="#" method="post" novalidate>
+        <!-- Ім’я -->
+        <div class="contact-form__item">
+          <label for="name" class="contact-form__label">Ім’я</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            class="contact-form__input"
+            placeholder="Ваше ім’я"
+            required
+            minlength="2"
+            maxlength="50"
+            pattern="^[A-Za-zА-Яа-яІіЇїЄєҐґ'’\- ]{2,50}$"
+            title="Використовуйте українські або латинські літери, пробіли, апостроф чи тире (2–50 символів)."
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="contact-form__item">
+          <label for="email" class="contact-form__label">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            class="contact-form__input"
+            placeholder="Ваш email"
+            required
+          />
+        </div>
+
+        <!-- Телефон -->
+        <div class="contact-form__item">
+          <label for="phone" class="contact-form__label">Телефон</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            class="contact-form__input"
+            placeholder="+380XXXXXXXXX"
+            required
+            pattern="^\+?380\d{9}$"
+            title="Формат: +380XXXXXXXXX"
+          />
+        </div>
+
+        <!-- Повідомлення -->
+        <div class="contact-form__item">
+          <label for="message" class="contact-form__label">Повідомлення</label>
+          <textarea
+            id="message"
+            name="message"
+            class="contact-form__textarea"
+            rows="5"
+            placeholder="Ваше повідомлення"
+            required
+            minlength="5"
+            maxlength="1000"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="contact-form__button">Надіслати</button>
+      </form>
+    </main>
+
+    <!-- FOOTER (із контактами) -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__text">© 2025 Група <span class="footer__group-name">6.1213-пі2</span></p>
+
+        <address class="footer__contacts" aria-label="Наші контакти">
+          <h3 class="footer__contacts-title">Наші контакти</h3>
+          <ul class="footer__contacts-list">
+            <li class="footer__contacts-item">
+              <span class="footer__label">Email:</span>
+              <a class="footer__link" href="mailto:example@mail.com">example@mail.com</a>
+            </li>
+            <li class="footer__contacts-item">
+              <span class="footer__label">Телефон:</span>
+              <a class="footer__link" href="tel:+380501112233">+38 (050) 111-22-33</a>
+            </li>
+            <li class="footer__contacts-item">
+              <span class="footer__label">Адреса:</span>
+              Запоріжжя, вул. Університетська, 66б
+            </li>
+          </ul>
+        </address>
       </div>
-
-      <!-- Email -->
-      <div class="contact-form__item">
-        <label for="email" class="contact-form__label">Email</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          class="contact-form__input"
-          placeholder="Ваш email"
-          required
-        />
-      </div>
-
-      <!-- Телефон -->
-      <div class="contact-form__item">
-        <label for="phone" class="contact-form__label">Телефон</label>
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          class="contact-form__input"
-          placeholder="+380XXXXXXXXX"
-          required
-          pattern="^\+?380\d{9}$"
-          title="Формат: +380XXXXXXXXX"
-        />
-      </div>
-
-      <!-- Повідомлення -->
-      <div class="contact-form__item">
-        <label for="message" class="contact-form__label">Повідомлення</label>
-        <textarea
-          id="message"
-          name="message"
-          class="contact-form__textarea"
-          rows="5"
-          placeholder="Ваше повідомлення"
-          required
-          minlength="5"
-          maxlength="1000"
-        ></textarea>
-      </div>
-
-      <button type="submit" class="contact-form__button">Надіслати</button>
-    </form>
-
-    <!-- (поки залишаємо в main; за методичкою можна буде перенести у footer) -->
-    <section class="contacts-info" aria-labelledby="contacts-title">
-      <h3 id="contacts-title" class="contacts-info__title">Наші контакти</h3>
-      <p class="contacts-info__row">Email: <a href="mailto:example@mail.com">example@mail.com</a></p>
-      <p class="contacts-info__row">Телефон: <a href="tel:+380501234567">+38 (050) 123-45-67</a></p>
-      <p class="contacts-info__row">Адреса: м. Запоріжжя, вул. Університетська, 65</p>
-    </section>
-  </main>
-
-  <!-- ASIDE із модифікатором: соцмережі -->
-  <aside class="sidebar sidebar--social" aria-label="Соціальні мережі">
-    <h3 class="sidebar__title">Соціальні мережі</h3>
-    <ul class="sidebar__list">
-      <li class="sidebar__item"><a class="sidebar__link" href="https://facebook.com"  target="_blank" rel="noopener noreferrer">Facebook</a></li>
-      <li class="sidebar__item"><a class="sidebar__link" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-      <li class="sidebar__item"><a class="sidebar__link" href="https://linkedin.com"  target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-    </ul>
-  </aside>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer__copy">© 2025 Група 6.1213-пі2</p>
-  </footer>
-
+    </footer>
+  </div>
 </body>
 </html>
