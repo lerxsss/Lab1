@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Головна сторінка навчального лендінгу: новини, послуги, переваги." />
+  <meta name="description" content="Головна сторінка навчального лендінгу: останні новини, корисні посилання, цінності." />
   <title>Лабораторна 4 — Головна</title>
   <link rel="icon" href="assets/images/favicon.ico" />
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -12,7 +12,7 @@
   <div class="layout">
     <!-- HEADER -->
     <header class="header">
-      <h1 class="header__title">Лабораторна №4</h1>
+      <h1 class="header__title">Мій перший лендінг</h1>
       <nav class="nav" aria-label="Головна навігація">
         <a class="nav__link" href="index.html" aria-current="page">Головна</a>
         <a class="nav__link" href="about.html">Про нас</a>
@@ -20,14 +20,20 @@
       </nav>
     </header>
 
-    <!-- SIDENAV (уніфікований) -->
+    <!-- SIDENAV (уніфікований для всіх сторінок) -->
     <aside class="sidenav">
       <section class="sidebar sidebar--links" aria-label="Корисні посилання">
         <h3 class="sidebar__title">Корисні посилання</h3>
         <ul class="sidebar__list">
-          <li class="sidebar__item"><a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
-          <li class="sidebar__item"><a class="sidebar__link" href="https://w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
-          <li class="sidebar__item"><a class="sidebar__link" href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS-Tricks</a></li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="https://w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS-Tricks</a>
+          </li>
         </ul>
       </section>
 
@@ -54,7 +60,6 @@
     <main class="main" id="main">
       <h2 class="main__title">Останні новини</h2>
 
-      <!-- Стрічка новин -->
       <section class="news" aria-labelledby="news-title">
         <h3 id="news-title" class="news__title" hidden>Стрічка новин</h3>
 
@@ -62,34 +67,73 @@
           <!-- Картка новини 1 -->
           <article class="news-card">
             <figure class="media">
-              <img class="media__img" src="assets/images/favicon.ico" alt="Зображення новини 1" />
+              <picture class="news-card__picture">
+                <source type="image/avif" srcset="assets/images/placeholder.avif" />
+                <source type="image/webp" srcset="assets/images/placeholder.webp" />
+                <img
+                  class="media__img news-card__img"
+                  src="assets/images/placeholder.jpg"
+                  alt="Старт навчального веб-проєкту"
+                  width="640" height="360"
+                  loading="lazy" decoding="async" />
+              </picture>
             </figure>
-            <h4 class="news-card__title">Студентка Бєлоусова Валерія (6.1213-пі2)</h4>
-            <p class="news-card__excerpt">Розпочала роботу над лабораторною №4: реорганізовано структуру та стилі за BEM.</p>
-            <p class="news-card__meta">19.09.2025</p>
-            <button class="news-card__btn" type="button">Читати далі</button>
+            <h4 class="news-card__title">Старт навчального веб-проєкту</h4>
+            <p class="news-card__excerpt">
+              Група розпочала роботу над веб-проєктом, який охопить HTML, CSS, JS та React…
+            </p>
+            <div class="news-card__bar">
+              <span class="news-card__date">10 вер 2025</span>
+              <button class="news-card__btn" type="button">Читати далі</button>
+            </div>
           </article>
 
           <!-- Картка новини 2 -->
           <article class="news-card">
             <figure class="media">
-              <img class="media__img" src="assets/images/favicon.ico" alt="Зображення новини 2" />
+              <picture class="news-card__picture">
+                <source type="image/avif" srcset="assets/images/placeholder.avif" />
+                <source type="image/webp" srcset="assets/images/placeholder.webp" />
+                <img
+                  class="media__img news-card__img"
+                  src="assets/images/placeholder.jpg"
+                  alt="Flexbox і Grid: практика"
+                  width="640" height="360"
+                  loading="lazy" decoding="async" />
+              </picture>
             </figure>
-            <h4 class="news-card__title">Шаблон сайту уніфіковано</h4>
-            <p class="news-card__excerpt">Додано спільний grid-layout, оновлено навігацію та sidebar-панелі.</p>
-            <p class="news-card__meta">20.09.2025</p>
-            <button class="news-card__btn" type="button">Читати далі</button>
+            <h4 class="news-card__title">Flexbox + Grid: практика</h4>
+            <p class="news-card__excerpt">
+              На четвертій лекції розберемо одновимірний та двовимірний лейаути з практикою…
+            </p>
+            <div class="news-card__bar">
+              <span class="news-card__date">12 вер 2025</span>
+              <button class="news-card__btn" type="button">Читати далі</button>
+            </div>
           </article>
 
           <!-- Картка новини 3 -->
           <article class="news-card">
             <figure class="media">
-              <img class="media__img" src="assets/images/favicon.ico" alt="Зображення новини 3" />
+              <picture class="news-card__picture">
+                <source type="image/avif" srcset="assets/images/placeholder.avif" />
+                <source type="image/webp" srcset="assets/images/placeholder.webp" />
+                <img
+                  class="media__img news-card__img"
+                  src="assets/images/placeholder.jpg"
+                  alt="План вивчення React"
+                  width="640" height="360"
+                  loading="lazy" decoding="async" />
+              </picture>
             </figure>
-            <h4 class="news-card__title">Покращено UX форми</h4>
-            <p class="news-card__excerpt">Додано підсвітку станів полів, валідацію та чіткі підказки користувачу.</p>
-            <p class="news-card__meta">21.09.2025</p>
-            <button class="news-card__btn" type="button">Читати далі</button>
+            <h4 class="news-card__title">React</h4>
+            <p class="news-card__excerpt">
+              Заплановано вивчення основ React…
+            </p>
+            <div class="news-card__bar">
+              <span class="news-card__date">15 вер 2025</span>
+              <button class="news-card__btn" type="button">Читати далі</button>
+            </div>
           </article>
         </div>
       </section>
