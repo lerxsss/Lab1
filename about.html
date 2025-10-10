@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Сторінка Про нас — інформація про команду, навички та цінності." />
   <title>Лабораторна №4 — Про нас</title>
 
@@ -10,13 +10,10 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-
-  <!-- ГЛОБАЛЬНИЙ LAYOUT (grid-області: header | sidenav | main | footer) -->
   <div class="layout">
-
     <!-- HEADER -->
     <header class="header">
-      <h1 class="header__title">Лабораторна №4</h1>
+      <h1 class="header__title">Мій перший лендінг</h1>
       <nav class="nav" aria-label="Головна навігація">
         <a class="nav__link" href="index.html">Головна</a>
         <a class="nav__link" href="about.html" aria-current="page">Про нас</a>
@@ -24,8 +21,7 @@
       </nav>
     </header>
 
-
-    <!-- SIDENAV: три картки (корисні посилання / цінності / соцмережі) -->
+    <!-- SIDENAV -->
     <aside class="sidenav">
       <section class="sidebar sidebar--links" aria-label="Корисні посилання">
         <h3 class="sidebar__title">Корисні посилання</h3>
@@ -36,7 +32,6 @@
         </ul>
       </section>
 
-      <!-- Картка 2 -->
       <section class="sidebar sidebar--values" aria-label="Цінності">
         <h3 class="sidebar__title">Цінності</h3>
         <ul class="sidebar__list">
@@ -46,13 +41,12 @@
         </ul>
       </section>
 
-      <!-- Картка 3 -->
       <section class="sidebar sidebar--social" aria-label="Соціальні мережі">
         <h3 class="sidebar__title">Соціальні мережі</h3>
         <ul class="sidebar__list">
-          <li class="sidebar__item"><a class="sidebar__link" href="https://facebook.com"  target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
           <li class="sidebar__item"><a class="sidebar__link" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-          <li class="sidebar__item"><a class="sidebar__link" href="https://linkedin.com"  target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
       </section>
     </aside>
@@ -76,11 +70,10 @@
       </article>
     </main>
 
-    <!-- FOOTER: з блоком «Наші контакти» праворуч -->
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__inner">
         <p class="footer__text">© 2025 Група <span class="footer__group-name">6.1213-пі2</span></p>
-
         <address class="footer__contacts" aria-label="Наші контакти">
           <h3 class="footer__contacts-title">Наші контакти</h3>
           <ul class="footer__contacts-list">
@@ -100,7 +93,6 @@
         </address>
       </div>
     </footer>
-
-  </div><!-- /layout -->
+  </div>
 </body>
 </html>
