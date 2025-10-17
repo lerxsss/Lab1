@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="РЎС‚РѕСЂС–РЅРєР° РљРѕРЅС‚Р°РєС‚Рё вЂ” С„РѕСЂРјР° Р·РІРѕСЂРѕС‚РЅРѕРіРѕ Р·РІ'СЏР·РєСѓ С‚Р° РєРѕРЅС‚Р°РєС‚РЅС– РґР°РЅС–." />
+  <title>Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР° 4 вЂ” РљРѕРЅС‚Р°РєС‚Рё</title>
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  
+</head>
+<body>
+  <div class="layout">
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="header__title">РњС–Р№ РїРµСЂС€РёР№ Р»РµРЅРґС–РЅРі</h1>
+      <nav class="nav" aria-label="Р“РѕР»РѕРІРЅР° РЅР°РІС–РіР°С†С–СЏ">
+        <a class="nav__link" href="index.html">Р“РѕР»РѕРІРЅР°</a>
+        <a class="nav__link" href="about.html">РџСЂРѕ РЅР°СЃ</a>
+        <a class="nav__link nav__link--cta" href="contacts.html" aria-current="page">РљРѕРЅС‚Р°РєС‚Рё</a>
+      </nav>
+    </header>
+
+    <!-- SIDENAV (СѓРЅС–С„С–РєРѕРІР°РЅРёР№) -->
+    <aside class="sidenav">
+      <section class="sidebar sidebar--links" aria-label="РљРѕСЂРёСЃРЅС– РїРѕСЃРёР»Р°РЅРЅСЏ">
+        <h3 class="sidebar__title">РљРѕСЂРёСЃРЅС– РїРѕСЃРёР»Р°РЅРЅСЏ</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS-Tricks</a></li>
+        </ul>
+      </section>
+
+      <section class="sidebar sidebar--values" aria-label="Р¦С–РЅРЅРѕСЃС‚С–">
+        <h3 class="sidebar__title">Р¦С–РЅРЅРѕСЃС‚С–</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">РЇРєС–СЃС‚СЊ РєРѕРґСѓ С‚Р° РїСЂРѕР·РѕСЂС–СЃС‚СЊ</li>
+          <li class="sidebar__item">РќР°РІС‡Р°РЅРЅСЏ С‡РµСЂРµР· РїСЂР°РєС‚РёРєСѓ</li>
+          <li class="sidebar__item">РљРѕРјСѓРЅС–РєР°С†С–СЏ С‚Р° РїС–РґС‚СЂРёРјРєР°</li>
+        </ul>
+      </section>
+
+      <section class="sidebar sidebar--social" aria-label="РЎРѕС†С–Р°Р»СЊРЅС– РјРµСЂРµР¶С–">
+        <h3 class="sidebar__title">РЎРѕС†С–Р°Р»СЊРЅС– РјРµСЂРµР¶С–</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><a class="sidebar__link" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main" id="main">
+      <h2 class="main__title">Р—РІвЂ™СЏР¶С–С‚СЊСЃСЏ Р· РЅР°РјРё</h2>
+
+      <!-- Р„РґРёРЅР° С„РѕСЂРјР° РІ main -->
+      <form class="contact-form" action="#" method="post" novalidate>
+        <!-- Р†РјвЂ™СЏ -->
+        <div class="contact-form__item">
+          <label for="name" class="contact-form__label">Р†РјвЂ™СЏ</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            class="contact-form__input"
+            placeholder="Р’Р°С€Рµ С–РјвЂ™СЏ"
+            required
+            minlength="2"
+            maxlength="50"
+            pattern="^[A-Za-zРђ-РЇР°-СЏР†С–Р‡С—Р„С”ТђТ‘'вЂ™\- ]{2,50}$"
+            title="Р’РёРєРѕСЂРёСЃС‚РѕРІСѓР№С‚Рµ СѓРєСЂР°С—РЅСЃСЊРєС– Р°Р±Рѕ Р»Р°С‚РёРЅСЃСЊРєС– Р»С–С‚РµСЂРё, РїСЂРѕР±С–Р»Рё, Р°РїРѕСЃС‚СЂРѕС„ С‡Рё С‚РёСЂРµ (2вЂ“50 СЃРёРјРІРѕР»С–РІ)."
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="contact-form__item">
+          <label for="email" class="contact-form__label">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            class="contact-form__input"
+            placeholder="Р’Р°С€ email"
+            required
+          />
+        </div>
+
+        <!-- РўРµР»РµС„РѕРЅ -->
+        <div class="contact-form__item">
+          <label for="phone" class="contact-form__label">РўРµР»РµС„РѕРЅ</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            class="contact-form__input"
+            placeholder="+380XXXXXXXXX"
+            required
+            pattern="^\+?380\d{9}$"
+            title="Р¤РѕСЂРјР°С‚: +380XXXXXXXXX"
+          />
+        </div>
+
+        <!-- РџРѕРІС–РґРѕРјР»РµРЅРЅСЏ -->
+        <div class="contact-form__item">
+          <label for="message" class="contact-form__label">РџРѕРІС–РґРѕРјР»РµРЅРЅСЏ</label>
+          <textarea
+            id="message"
+            name="message"
+            class="contact-form__textarea"
+            rows="5"
+            placeholder="Р’Р°С€Рµ РїРѕРІС–РґРѕРјР»РµРЅРЅСЏ"
+            required
+            minlength="5"
+            maxlength="1000"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="contact-form__button">РќР°РґС–СЃР»Р°С‚Рё</button>
+      </form>
+    </main>
+
+    <!-- FOOTER (С–Р· РєРѕРЅС‚Р°РєС‚Р°РјРё) -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__text">В© 2025 Р“СЂСѓРїР° <span class="footer__group-name">6.1213-РїС–2</span></p>
+
+        <address class="footer__contacts" aria-label="РќР°С€С– РєРѕРЅС‚Р°РєС‚Рё">
+          <h3 class="footer__contacts-title">РќР°С€С– РєРѕРЅС‚Р°РєС‚Рё</h3>
+          <ul class="footer__contacts-list">
+            <li class="footer__contacts-item">
+              <span class="footer__label">Email:</span>
+              <a class="footer__link" href="mailto:example@mail.com">example@mail.com</a>
+            </li>
+            <li class="footer__contacts-item">
+              <span class="footer__label">РўРµР»РµС„РѕРЅ:</span>
+              <a class="footer__link" href="tel:+380501112233">+38 (050) 111-22-33</a>
+            </li>
+            <li class="footer__contacts-item">
+              <span class="footer__label">РђРґСЂРµСЃР°:</span>
+              Р—Р°РїРѕСЂС–Р¶Р¶СЏ, РІСѓР». РЈРЅС–РІРµСЂСЃРёС‚РµС‚СЃСЊРєР°, 66Р±
+            </li>
+          </ul>
+        </address>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
+
