@@ -1,0 +1,29 @@
+.layout{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "sidenav"
+    "main"
+    "footer";
+  min-height: 100dvh;
+}
+.header  { grid-area: header; }
+.sidenav { grid-area: sidenav; }
+.main    { grid-area: main; }
+.footer  { grid-area: footer; }
+
+@media (min-width: 640px){
+  .layout{
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "sidenav main"
+      "footer footer";
+  }
+}
+@media (min-width: 1024px){
+  .layout{ grid-template-columns: 280px 1fr; }
+}

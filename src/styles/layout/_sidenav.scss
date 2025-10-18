@@ -1,0 +1,30 @@
+/* 4) SIDENAV */
+.sidenav{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+}
+.sidebar{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-1);
+}
+.sidebar__title{
+  margin: 0 0 var(--space-3);
+  color: var(--brand);
+  font-size: 1.1rem;
+}
+.sidebar__list{ display: grid; gap: var(--space-2); }
+.sidebar__item{ color: var(--fg); }
+.sidebar__link{ color: var(--brand); }
+.sidebar__link:hover, .sidebar__link:focus-visible{ text-decoration: underline; }
+
+/* декоративні варіанти */
+.sidebar--links  { background: color-mix(in srgb, var(--surface) 92%, #c2f0d0 8%); }
+.sidebar--values { background: color-mix(in srgb, var(--surface) 92%, #cfe9ff 8%); }
+.sidebar--social { background: color-mix(in srgb, var(--surface) 92%, #dfeaff 8%); }
