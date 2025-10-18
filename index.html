@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Головна сторінка навчального лендінгу: останні новини, корисні посилання, цінності." />
   <title>Лабораторна 4 — Головна</title>
-  <link rel="icon" href="assets/images/favicon.ico" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="/assets/images/favicon.ico" />
 </head>
 <body>
   <div class="layout">
@@ -20,7 +19,7 @@
       </nav>
     </header>
 
-    <!-- SIDENAV (уніфікований для всіх сторінок) -->
+    <!-- SIDENAV -->
     <aside class="sidenav">
       <section class="sidebar sidebar--links" aria-label="Корисні посилання">
         <h3 class="sidebar__title">Корисні посилання</h3>
@@ -68,11 +67,11 @@
           <article class="news-card">
             <figure class="media">
               <picture class="news-card__picture">
-                <source type="image/avif" srcset="assets/images/placeholder.avif" />
-                <source type="image/webp" srcset="assets/images/placeholder.webp" />
+                <source type="image/avif" srcset="/assets/images/placeholder.avif" />
+                <source type="image/webp" srcset="/assets/images/placeholder.webp" />
                 <img
                   class="media__img news-card__img"
-                  src="assets/images/placeholder.jpg"
+                  src="/assets/images/placeholder.jpg"
                   alt="Старт навчального веб-проєкту"
                   width="640" height="360"
                   loading="lazy" decoding="async" />
@@ -92,11 +91,11 @@
           <article class="news-card">
             <figure class="media">
               <picture class="news-card__picture">
-                <source type="image/avif" srcset="assets/images/placeholder.avif" />
-                <source type="image/webp" srcset="assets/images/placeholder.webp" />
+                <source type="image/avif" srcset="/assets/images/placeholder.avif" />
+                <source type="image/webp" srcset="/assets/images/placeholder.webp" />
                 <img
                   class="media__img news-card__img"
-                  src="assets/images/placeholder.jpg"
+                  src="/assets/images/placeholder.jpg"
                   alt="Flexbox і Grid: практика"
                   width="640" height="360"
                   loading="lazy" decoding="async" />
@@ -116,11 +115,11 @@
           <article class="news-card">
             <figure class="media">
               <picture class="news-card__picture">
-                <source type="image/avif" srcset="assets/images/placeholder.avif" />
-                <source type="image/webp" srcset="assets/images/placeholder.webp" />
+                <source type="image/avif" srcset="/assets/images/placeholder.avif" />
+                <source type="image/webp" srcset="/assets/images/placeholder.webp" />
                 <img
                   class="media__img news-card__img"
-                  src="assets/images/placeholder.jpg"
+                  src="/assets/images/placeholder.jpg"
                   alt="План вивчення React"
                   width="640" height="360"
                   loading="lazy" decoding="async" />
@@ -164,5 +163,8 @@
       </div>
     </footer>
   </div>
+
+  <!-- Vite entry -->
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
