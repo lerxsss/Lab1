@@ -1,21 +1,32 @@
 // vite.config.js
-import { defineConfig } from 'vite';
-import { resolve } from 'node:path';
+import { defineConfig } from 'vite'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import handlebars from 'vite-plugin-handlebars'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname  = dirname(__filename)
 
 export default defineConfig({
-  // щоб зручно імпортувати з /src
-  resolve: {
-    alias: { '@': resolve(__dirname, 'src') }
-  },
-
-  // мультисторінкова збірка
+  plugins: [
+    handlebars({
+      // ВАЖЛИВО: однина!
+      partialDirectory: resolve(__dirname, 'src', 'partials'),
+      context: {
+        siteName: 'Лабораторна №6',
+        labName:  'Лабораторна №6',
+      },
+      reloadOnPartialChange: true,
+    }),
+  ],
+  resolve: { alias: { '@': resolve(__dirname, 'src') } },
   build: {
     rollupOptions: {
       input: {
         main:     resolve(__dirname, 'index.html'),
         about:    resolve(__dirname, 'about.html'),
         contacts: resolve(__dirname, 'contacts.html'),
-      }
-    }
-  }
-});
+      },
+    },
+  },
+})
