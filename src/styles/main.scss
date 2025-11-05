@@ -1,4 +1,4 @@
-@use './_index' as ui;
+﻿@use './_index' as ui;
 
 @use './base/reset';
 @use './base/base';
@@ -14,3 +14,4 @@
 @use './components/news-card';
 @use './components/media';
 @use './components/contact-form';
+@use './components/employee-card';
