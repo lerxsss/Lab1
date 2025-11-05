@@ -1,81 +1,68 @@
-{{#> layout pageTitle="Головна" studentGroup="6.1213-пі2" studentEmail="example@mail.com"}}
-  <h2 class="main__title">Останні новини</h2>
-
-  <section class="news" aria-labelledby="news-title">
-    <h3 id="news-title" class="news__title" hidden>Стрічка новин</h3>
-
+{{#> layout pageTitle="Головна" studentGroup="6.1213-2" studentEmail="lerusia136@gmail.com" }}
+<section class="news">
+    <h2 class="news__title">Останні новини</h2>
     <div class="news__list">
-      <!-- Картка новини 1 -->
-      <article class="news-card">
-        <figure class="media">
-          <picture class="news-card__picture">
-            <source type="image/avif" srcset="assets/images/placeholder.avif" />
-            <source type="image/webp" srcset="assets/images/placeholder.webp" />
-            <img
-              class="media__img news-card__img"
-              src="assets/images/placeholder.jpg"
-              alt="Старт навчального веб-проєкту"
-              width="640" height="360"
-              loading="lazy" decoding="async" />
-          </picture>
-        </figure>
-        <h4 class="news-card__title">Старт навчального веб-проєкту</h4>
-        <p class="news-card__excerpt">
-          Група розпочала роботу над веб-проєктом, який охопить HTML, CSS, JS та React…
-        </p>
-        <div class="news-card__bar">
-          <span class="news-card__date">10 вер 2025</span>
-          <button class="news-card__btn" type="button">Читати далі</button>
-        </div>
-      </article>
+        <article class="card">
+            <figure class="news-card__media media">
+                <picture>
+                    <source type="image/avif" srcset="/assets/images/placeholder.avif">
+                    <source type="image/webp" srcset="/assets/images/placeholder.webp">
+                    <img
+                            src="/assets/images/placeholder.jpg"
+                            alt="Flexbox + Grid"
+                            class="media__img"
+                            width="640" height="360"
+                            loading="lazy" decoding="async" />
+                </picture>
+            </figure>
+            <h3 class="news-card__title text-[1.1rem]">Старт навчального веб-проєкту</h3>
+            <p class="news-card__excerpt text-[color:var(--fg-muted)]">Група розпочала роботу над веб-проєктом, який охопить HTML, CSS, JS та React…</p>
 
-      <!-- Картка новини 2 -->
-      <article class="news-card">
-        <figure class="media">
-          <picture class="news-card__picture">
-            <source type="image/avif" srcset="assets/images/placeholder.avif" />
-            <source type="image/webp" srcset="assets/images/placeholder.webp" />
-            <img
-              class="media__img news-card__img"
-              src="assets/images/placeholder.jpg"
-              alt="Flexbox і Grid: практика"
-              width="640" height="360"
-              loading="lazy" decoding="async" />
-          </picture>
-        </figure>
-        <h4 class="news-card__title">Flexbox + Grid: практика</h4>
-        <p class="news-card__excerpt">
-          На четвертій лекції розберемо одновимірний та двовимірний лейаути з практикою…
-        </p>
-        <div class="news-card__bar">
-          <span class="news-card__date">12 вер 2025</span>
-          <button class="news-card__btn" type="button">Читати далі</button>
-        </div>
-      </article>
-
-      <!-- Картка новини 3 -->
-      <article class="news-card">
-        <figure class="media">
-          <picture class="news-card__picture">
-            <source type="image/avif" srcset="assets/images/placeholder.avif" />
-            <source type="image/webp" srcset="assets/images/placeholder.webp" />
-            <img
-              class="media__img news-card__img"
-              src="assets/images/placeholder.jpg"
-              alt="План вивчення React"
-              width="640" height="360"
-              loading="lazy" decoding="async" />
-          </picture>
-        </figure>
-        <h4 class="news-card__title">React</h4>
-        <p class="news-card__excerpt">
-          Заплановано вивчення основ React…
-        </p>
-        <div class="news-card__bar">
-          <span class="news-card__date">15 вер 2025</span>
-          <button class="news-card__btn" type="button">Читати далі</button>
-        </div>
-      </article>
+            <div class=" card__meta bg-white dark:bg-[color-mix(in_srgb,var(--surface)_92%,#fff_8%)]">
+                <time class="news-card__date text-[color:var(--fg-muted)] text-[.95rem]">10 вер 2025</time>
+                <a href="#" class=" btn-brand">Читати далі</a>
+            </div>
+        </article>
+        <article class="news-card">
+            <figure class="news-card__media media">
+                <picture>
+                    <source type="image/avif" srcset="/assets/images/placeholder.avif">
+                    <source type="image/webp" srcset="/assets/images/placeholder.webp">
+                    <img
+                            src="/assets/images/placeholder.jpg"
+                            alt="Flexbox + Grid"
+                            class="media__img"
+                            width="640" height="360"
+                            loading="lazy" decoding="async" />
+                </picture>
+            </figure>
+            <h3 class="news-card__title">Flexbox + Grid: практика</h3>
+            <p class="news-card__excerpt">На четвертій лекції розберемо одновимірний та двовимірний лейаути з практикою…</p>
+            <div class="news-card__meta">
+                <time class="news-card__date" datetime="2025-09-12">12 вер 2025</time>
+                <a href="#" class="news-card__btn">Читати далі</a>
+            </div>
+        </article>
+        <article class="news-card">
+            <figure class="news-card__media media">
+                <picture>
+                    <source type="image/avif" srcset="/assets/images/placeholder.avif">
+                    <source type="image/webp" srcset="/assets/images/placeholder.webp">
+                    <img
+                            src="/assets/images/placeholder.jpg"
+                            alt="React"
+                            class="media__img"
+                            width="640" height="360"
+                            loading="lazy" decoding="async" />
+                </picture>
+            </figure>
+            <h3 class="news-card__title">React</h3>
+            <p class="news-card__excerpt">Заплановано вивчення основ React…</p>
+            <div class="news-card__meta">
+                <time class="news-card__date" datetime="2025-09-15">15 вер 2025</time>
+                <a href="#" class="news-card__btn">Читати далі</a>
+            </div>
+        </article>
     </div>
-  </section>
+</section>
 {{/layout}}
